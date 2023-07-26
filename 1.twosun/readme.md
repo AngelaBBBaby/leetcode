@@ -1,4 +1,4 @@
-#### [1. 两数之和](https://leetcode.cn/problems/two-sum/)
+# [1. 两数之和](https://leetcode.cn/problems/two-sum/)
 
 难度简单
 
@@ -46,3 +46,46 @@
  
 
 **进阶：**你可以想出一个时间复杂度小于 `O(n2)` 的算法吗？
+
+
+
+# 思路
+
+**哈希表：**
+
+- 建立一个哈希表
+- 遍历数组，在哈希表中找target-nums[i]的值，若没找到，将数组的值以<值，下标>的形式存进哈希表中
+- 找到后返回迭代器的->second（即下标数）和当前的数组下标
+- 时间复杂度：O(n)
+- 空间复杂度：O(n)
+
+
+
+# 代码实现
+
+**C++：**
+
+```
+//哈希表
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target)
+    {
+        //vector<int> v;
+        unordered_map<int, int> m;
+        int j = 0;
+        for(int i = 0; i < nums.size(); i++)
+            {
+                auto it = m.find(target - nums[i]);
+                if(it != m.end())
+                    //it->second返回第一个值的下标
+                    return {it->second, i};
+                //找的是值而不是下标
+                //所以key为值，valu为下标，例如nums[1]->m[7] = 1
+                m[nums[i]] = i;
+            }
+        return {};
+    }
+};
+```
+
