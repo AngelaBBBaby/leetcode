@@ -71,7 +71,6 @@ public:
             for(line = left; line <= right && k < size; ++line)
             {
                 v.push_back(matrix[up][line]);
-                //res[k] = matrix[row][line];
                 ++k;
             }
             ++up;
@@ -80,7 +79,6 @@ public:
             for(row = up; row <= down && k < size; ++row)
             {
                 v.push_back(matrix[row][right]);
-                //res[k] = matrix[row][line];
                 ++k;
             }
             --right;
@@ -89,7 +87,6 @@ public:
             for(line = right; line >= left && k < size; --line)
             {
                 v.push_back(matrix[down][line]);
-                //res[k] = matrix[row][line];
                 ++k;
             }
             --down;
@@ -98,7 +95,6 @@ public:
             for(row = down; row >= up && k < size; --row)
             {
                 v.push_back(matrix[row][left]);
-                //res[k] = matrix[row][line];
                 ++k;
             }
             ++left;
