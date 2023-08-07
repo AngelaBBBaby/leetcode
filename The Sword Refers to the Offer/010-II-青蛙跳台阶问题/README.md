@@ -1,37 +1,33 @@
-# [剑指 Offer 10- I. 斐波那契数列](https://leetcode.cn/problems/fei-bo-na-qi-shu-lie-lcof/)
+# [剑指 Offer 10- II. 青蛙跳台阶问题](https://leetcode.cn/problems/qing-wa-tiao-tai-jie-wen-ti-lcof/)
 
 简单
 
 
 
-写一个函数，输入 `n` ，求斐波那契（Fibonacci）数列的第 `n` 项（即 `F(N)`）。斐波那契数列的定义如下：
-
-```
-F(0) = 0,   F(1) = 1
-F(N) = F(N - 1) + F(N - 2), 其中 N > 1.
-```
-
-斐波那契数列由 0 和 1 开始，之后的斐波那契数就是由之前的两数相加而得出。
+一只青蛙一次可以跳上1级台阶，也可以跳上2级台阶。求该青蛙跳上一个 `n` 级的台阶总共有多少种跳法。
 
 答案需要取模 1e9+7（1000000007），如计算初始结果为：1000000008，请返回 1。
-
- 
 
 **示例 1：**
 
 ```
 输入：n = 2
-输出：1
+输出：2
 ```
 
 **示例 2：**
 
 ```
-输入：n = 5
-输出：5
+输入：n = 7
+输出：21
 ```
 
- 
+**示例 3：**
+
+```
+输入：n = 0
+输出：1
+```
 
 **提示：**
 
@@ -47,6 +43,7 @@ F(N) = F(N - 1) + F(N - 2), 其中 N > 1.
 - 转移方程： f(n)=f(n-1)+f(n-2)
 - 初始状态： f(1)=1，f(2)=2
 - 返回值： f(n)，即第n个数字的值
+
 - 时间复杂度：O(n)
 - 空间复杂度：O(1)
 
@@ -60,16 +57,20 @@ F(N) = F(N - 1) + F(N - 2), 其中 N > 1.
 class Solution
 {
 public:
-    int fib(int n)
+    int numWays(int n)
     {
-        if(n < 2)
+        if(n <= 2)
+        {
+            if(n == 0)
+                return 1;
             return n;
-        int prev = 0, cur = 0, next = 1;
-        for (int i = 2; i <= n; ++i)
+        }
+        int prev = 1, cur = 1, next = 2;
+        for(int i = 2; i < n; ++i)
         {
             prev = cur;
             cur = next;
-            next = (prev + cur) % 1000000007;
+            next = (cur + prev) % 1000000007;
         }
         return next;
     }
