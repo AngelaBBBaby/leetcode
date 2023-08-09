@@ -51,12 +51,12 @@ class Solution
 public:
     int findRepeatNumber(vector<int>& nums)
     {
-        unordered_map<int, int> um;
+        unordered_map<int, bool> um;
         for(auto it : nums)
         {
-            um[it]++;
-            if(um[it] >= 2)
+        	if(um[it] == true)
                 return it;
+            um[it] = true;
         }
         return -1;
     }
