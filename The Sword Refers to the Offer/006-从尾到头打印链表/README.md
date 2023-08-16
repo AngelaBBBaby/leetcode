@@ -42,10 +42,10 @@
 
 **栈实现：**
 
-- 建立一个vector arr和一个stack st
+- 建立一个`vector arr`和一个`stack st`
 - 遍历链表，将链表中的值入栈 
-- 遍历stack，将stack的值放进arr后出栈
-- 遍历完成，返回arr
+- 遍历`stack`，将`stack`的值放进`arr`后出栈
+- 遍历完成，返回`arr`
 
 - 时间复杂度：O(n)
 - 空间复杂度：O(n)

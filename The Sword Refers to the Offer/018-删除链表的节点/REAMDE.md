@@ -49,10 +49,10 @@
 
 **递归：**
 
-- 建立递归函数，将head->next和val作为实参进行递归
+- 建立递归函数，将`head->next`和`val`作为实参进行递归
 
-- 当head为空时返回空
-- 当head->val不为val时递归head->next，当head->val为val时结束递归，返回head->next
+- 当`head`为空时返回空
+- 当`head->val`不为`val`时递归`head->next`，当`head->val`为`val`时结束递归，返回`head->next`
 
 - 时间复杂度 ：O(n)
 - 空间复杂度 ：O(n)
