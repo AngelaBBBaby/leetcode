@@ -37,11 +37,11 @@
 
 **二分查找：**
 
-- 在二分查找中加入bool lower以方便复用
+- 在二分查找中加入`bool lower`以方便复用
 
-- 先通过二分查找找到跟target相等的值的左范围left
-- 后通过二分查找找到跟target相等的值的右范围right
-- 返回right-left+1
+- 先通过二分查找找到跟`target`相等的值的左范围`left`
+- 后通过二分查找找到跟`target`相等的值的右范围`right`
+- 返回`right - left + 1`
 
 - 时间复杂度：O(logn)
 - 空间复杂度：O(1)

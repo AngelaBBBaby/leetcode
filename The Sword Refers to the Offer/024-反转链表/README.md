@@ -29,11 +29,11 @@
 
 **迭代：**
 
-- 建立ListNode* cur和next，分别保存当前节点（头节点的下一个）和当前节点的下一个节点
-- 首先令head->next为nullptr
-- 令cur->next为head
-- 进行迭代（head = cur，cur = next，next = cur->next）
-- 当cur为nullptr时，迭代结束，返回head
+- 建立`ListNode* cur`和`ListNode* next`，分别保存当前节点（头节点的下一个）和当前节点的下一个节点
+- 首先令`head->next`为`nullptr`
+- 令`cur->next`为`head`
+- 进行迭代`head = cur`，`cur = next`，`next = cur->next`
+- 当`cur`为`nullptr`时，迭代结束，返回`head`
 
 - 时间复杂度：O(n)
 - 空间复杂度：O(1)

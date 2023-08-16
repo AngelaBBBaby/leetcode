@@ -39,8 +39,8 @@
 **哈希+最值：**
 
 - 建立哈希表判断是有重复值，若有重复值返回false
-- 遍历nums，建立max_num，min_num变量保存nums中的最大值最小值
-- 遍历完成，若最大值-最小值<5，返回true，否则返回false
+- 遍历`nums`，建立`max_num`，`min_num`变量保存`nums`中的最大值最小值
+- 遍历完成，若`max_num-min_num < 5`，返回true，否则返回false
 
 - 时间复杂度：O(n)
 

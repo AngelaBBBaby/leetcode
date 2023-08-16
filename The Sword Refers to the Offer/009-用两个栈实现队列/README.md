@@ -37,9 +37,9 @@
 
 **双栈：**
 
-- 建立两个栈stack in和out，in用来入数据，out用来出数据
-- appendTail通过in实现，数据直接入in栈
-- deleteHead通过out实现，每当deleteHead时，若out为空则将in的全部数据依次弹出并压入out，返回out.top
+- 建立两个栈`stack in `和`stack out`，`in`用来入数据，`out`用来出数据
+- appendTail通过`in`实现，数据直接入`in`栈
+- deleteHead通过`out`实现，每当deleteHead时，若`out`为空则将`in`的全部数据依次弹出并压入`out`，返回`out.top`
 - 时间复杂度：O(1)
 
 - 空间复杂度：O(n)

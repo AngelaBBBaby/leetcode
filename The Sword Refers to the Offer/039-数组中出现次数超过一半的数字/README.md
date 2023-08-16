@@ -33,10 +33,10 @@
 
 **摩尔投票法：**
 
-- 建立变量mode、vote保存众数和票数
-- 遍历nums，每当`vote = 0`时，设`mode = nums的值`
+- 建立变量`mode`、`vote`保存众数和票数
+- 遍历`nums`，每当`vote = 0`时，设`mode = nums的值`
 - 当`nums的值 = mode`时，`++vote`，否则，`--vote`
-- 遍历完，此时`vote > 0`，返回mode
+- 遍历完，此时`vote > 0`，返回`mode`
 
 - 时间复杂度：O(n)
 

@@ -34,9 +34,9 @@
 
 **双指针：**
 
-- 拷贝s到新的string str上，len为s的size大小，i为s的下标，n为需要旋转的前n个字符
-- 遍历s，将n前面的字符放到str的i+len-n的位置上，将n前面的字符放到str的（i+len-n）%len的位置上
-- 遍历完成，返回str
+- 拷贝`s`到新的`string str`上，`len`为`s`的size大小，`i`为`s`的下标，`n`为需要旋转的前n个字符
+- 遍历`s`，将`n`前面的字符放到`str`的`i + len - n`的位置上，将`n`前面的字符放到`str`的`（i+len-n） % len`的位置上
+- 遍历完成，返回`str`
 - 时间复杂度：O(n)
 - 空间复杂度：O(n)
 
@@ -47,7 +47,8 @@
 **C++：**
 
 ```
-class Solution {
+class Solution
+{
 public:
     string reverseLeftWords(string s, int n)
     {

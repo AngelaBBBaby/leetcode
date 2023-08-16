@@ -35,9 +35,9 @@
 
 **排序：**
 
-- 使用C++库中的sort函数将arr进行排序
-- 建立`vector v`保存arr前k个数
-- 返回v
+- 使用C++库中的sort函数将`arr`进行排序
+- 建立`vector v`保存`arr`前k个数
+- 返回`v`
 
 - 时间复杂度：O(n*logn)
 

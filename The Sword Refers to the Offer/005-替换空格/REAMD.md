@@ -27,8 +27,10 @@
 
 # 思路
 
-- 需要考虑增容问题，所以直接新建一个string arr，不然需要在原string开辟新空间
-- 遍历原string s，当不是' '时，直接push_back进arr中，当是' '时，分别push_back ’%’ ，‘2’，‘0‘ 进arr中
+**字符串修改：**
+
+- 需要考虑增容问题，所以直接新建一个`string arr`，不然需要在原string开辟新空间
+- 遍历`s`，当不是空格时，直接push_back进`arr`中，当是空格时，分别push_back `%`，`2`，`0`进arr中
 - 遍历完成，返回arr
 - 时间复杂度：O(n)
 - 空间复杂度：O(n)

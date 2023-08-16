@@ -35,9 +35,9 @@
 
 **双指针：**
 
-- 建立双指针left和right分别指向nums的头和尾
-- 让left所在的值与right所在的值相加，对比target的大小，若比他大，right指针向左移，若比他小，left指针向右移
-- 当相等时，返回left和right所在的值；当left与right相遇，返回空
+- 建立双指针`left`和`right`分别指向`nums`的头和尾
+- 让`left`所在的值与`right`所在的值相加，对比`target`的大小，若比他大，`right`向左移，若比他小，`left`向右移
+- 当相等时，返回`left`和`right`所在的值；当`left`与`right`相遇，返回`nullptr`
 - 时间复杂度：O(n)
 - 空间复杂度：O(1)
 
