@@ -36,7 +36,7 @@
 
 **滑动窗口：**
 
-- 建立滑动窗口的左边界和右边界，`sum`为滑动窗口之和，建立`vector<vector<int\>> vv`记录和为`target`的连续正数序列 
+- 建立滑动窗口的左边界和右边界，`sum`为滑动窗口之和，建立`vector<vector<int>> vv`记录和为`target`的连续正数序列 
 - 当 `sum > target`时，向右移动左边界，更新`sum`
 - 当 `sum < target`时，向右移动右边界，更新`sum`
 - 当  `sum = target`时，记录此时滑动窗口的序列至`vv`中，并向右移动右边界
